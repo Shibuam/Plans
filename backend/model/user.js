@@ -1,4 +1,4 @@
-import { Sequelize } from 'sequelize';
+import { Sequelize } from 'sequelize/index.js';
 export const sequelize = new Sequelize('test', 'root', 'Rahul.a5859@', {dialect: 'mysql'});
 
 export const User = sequelize.define('user_details', {
