@@ -25,7 +25,7 @@ const { register, handleSubmit, formState: { errors } } = useForm();
 
 const FormSubmit = async (loginDetails) => {
 console.log(loginDetails)
-const url='http://localhost:4000/user/login'
+const url='/user/login'
 
 try {
     let {data}=await axios.post(url,loginDetails)

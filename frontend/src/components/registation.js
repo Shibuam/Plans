@@ -28,7 +28,7 @@ function Registration() {
 
     const FormSubmit = async (reg) => {
 
-        const url = 'http://localhost:4000/user/registration'
+        const url = '/user/registration'
 
         let { data } = await axios.post(url, reg)
         if (!data.user) {

@@ -23,7 +23,7 @@ export default function Home() {
     const [user, setUser] = React.useState(null)
 
     const upgradeHandler = async () => {
-        const { data } = await axios.patch(`http://localhost:4000/user/upgrade/${user.user_id}`, {}, {
+        const { data } = await axios.patch(`/user/upgrade/${user.user_id}`, {}, {
             headers: {
                 Authorization: `Bearer ${userFromLS.token}`,
             },
@@ -39,7 +39,7 @@ export default function Home() {
     React.useEffect(() => {
         const getUserDetails = async () => {
             try {
-                const { data } = await axios.get('http://localhost:4000/user', {
+                const { data } = await axios.get('/user', {
                     headers: {
                         Authorization: `Bearer ${userFromLS.token}`,
                     },
